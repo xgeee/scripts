@@ -1,7 +1,7 @@
 Note: All the scripts are in a single repository and extensionless so you can just clone the repo, and put the direcotry in your global $PATH variable for ease of use.
 
 
-# hexof # 
+# hexof  
 
 hexadecimal strings manipulation tool
 
@@ -22,7 +22,7 @@ usage: hexof <string> <options>
 fun example:
 	echo -e $(hexof hello -d "\\x")
 
-# brutegen # 
+# brutegen  
 Generate every possible strings based on a custom charset, and a custom length
 
 usage: bruteGen AB 3
@@ -30,7 +30,7 @@ usage: bruteGen AB 3
 AAA BAA ABA BBA AAB BAB ABB BBB
 
 
-# cheat #
+# cheat 
 easy file creation
 
 usage: cheat <filename>
@@ -38,7 +38,7 @@ usage: cheat <filename>
 creates/edits a file <filename> in your $HOME/.cheat/ directory
 can be used to take notes about commands.
 
-# urld # 
+# urld  
 
 easy url decode from the command line
 
