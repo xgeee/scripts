@@ -9,11 +9,11 @@ usage: hexof &lt;string&gt; &lt;options&gt;
 	
 	options:
 	
-	-d &lt;delimiter&gt;	: put the <delimiter> string inbetween each returned character
+	-d <delimiter>;	: put the <delimiter> string inbetween each returned character
 	
 	-r 				: reversed order
 	
-	-x &lt;xor key&gt;	: xor (EXPERIMENTAL)
+	-x <xor key>;	: xor (EXPERIMENTAL)
 	
 	-g <nb>			: group characters (default 1)
 	
