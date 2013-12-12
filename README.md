@@ -8,26 +8,24 @@ options:
 	-r 				: reversed order
 	-x <xor key>	: xor (EXPERIMENTAL)
 	-g <nb>			: group characters (default 1)
-
 	--asm			: alias for: hexof -d "push $0x" -g 4 -r
 
 fun example:
 	echo -e $(hexof hello -d "\\x")
 
-== brutegen ==
+# brutegen # 
 Generate every possible strings based on a custom charset, and a custom length
-
-# bruteGen AB 3
+usage: bruteGen AB 3
 AAA BAA ABA BBA AAB BAB ABB BBB
 
 
-== cheat ==
+# cheat #
 easy file creation
 usage: cheat <filename>
 creates/edits a file <filename> in your $HOME/.cheat/ directory
 can be used to take notes about commands.
 
-== urld == 
+# urld # 
 easy url decode from the command line
 usage: urld url%20encoded%20string
 
