@@ -21,7 +21,7 @@ usage: hexof &lt;string&gt; &lt;options&gt;
 
 fun example:
 	
-	echo -e $(hexof hello -d "\\\x")
+	echo -e $(hexof hello -d "\\x")
 
 # brutegen  
 Generate every possible strings based on a custom charset, and a custom length
