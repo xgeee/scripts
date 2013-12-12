@@ -20,6 +20,7 @@ usage: hexof &lt;string&gt; &lt;options&gt;
 	--asm			: alias for: hexof -d "push $0x" -g 4 -r
 
 fun example:
+	
 	echo -e $(hexof hello -d "\\\x")
 
 # brutegen  
