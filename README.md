@@ -5,15 +5,15 @@ Note: All the scripts are in a single repository and extensionless so you can ju
 
 hexadecimal strings manipulation tool
 
-usage: hexof <string> <options>
+usage: hexof &lt;string&gt; &lt;options&gt;
 	
 	options:
 	
-	-d <delimiter>	: put the <delimiter> string inbetween each returned character
+	-d &lt;delimiter&gt;	: put the <delimiter> string inbetween each returned character
 	
 	-r 				: reversed order
 	
-	-x <xor key>	: xor (EXPERIMENTAL)
+	-x &lt;xor key&gt;	: xor (EXPERIMENTAL)
 	
 	-g <nb>			: group characters (default 1)
 	
@@ -33,9 +33,9 @@ AAA BAA ABA BBA AAB BAB ABB BBB
 # cheat 
 easy file creation
 
-usage: cheat <filename>
+usage: cheat &lt;filename&gt;
 
-creates/edits a file <filename> in your $HOME/.cheat/ directory
+creates/edits a file &lt;filename&gt; in your $HOME/.cheat/ directory
 can be used to take notes about commands.
 
 # urld  
