@@ -1,0 +1,46 @@
+#!/usr/bin/env python
+#echo $(hexof bonjour -d \\x -x xorvalue)
+from sys import argv
+from sys import exit
+d=""
+r=1
+x=""
+g=1
+asm = "--asm" in argv
+for i in range(len(argv)):
+	if argv[i] == "-g":
+		try:
+			g = int(argv[i+1])
+		except:
+			print "Error: option -q requires a delimiter"
+			exit()
+	if argv[i] == "-d":
+		try:
+			d = argv[i+1]
+		except:
+			print "Error: option -d requires a delimiter"
+			exit()
+	elif argv[i] == "-r":
+		r = -1
+	elif argv[i] == "-x":
+		try:
+			x = argv[i+1]
+		except:
+			print "Error: option -x requires a xor key"
+			exit()
+ret = []
+i=0
+for l in argv[1]:
+	if x != "":
+		ret.append(str((hex(ord(l)^ord(x[i])))[2::]))
+	else:
+		ret.append(str((hex(ord(l)))[2::]))
+	i=i+1
+	if i == len(x):
+		i = 0
+if asm:
+	d = "\npush $0x" 
+ 	g = 4
+	r = -1
+ret = ret[::r]
+print ("0x" if not d and r==1 else d)+d.join(["".join(x) for x in [ret[i:i+g] for i in range(0, len(ret), g)]])

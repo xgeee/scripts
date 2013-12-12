@@ -1,0 +1,32 @@
+#inspired from ...
+
+#cheat <cmd>
+#if <cmd> exists::
+#	cat cmd
+#else:
+#	would you like to create it? (y/n)
+#cheat -e
+#	lance l'editer de $PATH sur le new fichier
+if [ ! $# -eq 1 ]; then
+	echo "Usage: cheat <filename>"
+	exit
+fi
+if [ ! -d "${HOME}/.cheat/" ]; then
+	echo "Init dir"
+	mkdir "${HOME}/.cheat/"
+fi
+
+
+if [ $# -eq 1 ]; then
+	if [ ! -f "${HOME}/.cheat/$1" ]; then
+		vim "$HOME/.cheat/$1"
+
+	else
+		cat "${HOME}/.cheat/$1"
+		echo
+		read -p "edit? (y/n)" r
+		if [ "$r" == "y" ]; then
+			vim "$HOME/.cheat/$1"
+		fi
+	fi
+fi
