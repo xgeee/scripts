@@ -9,18 +9,18 @@ usage: hexof &lt;string&gt; &lt;options&gt;
 	
 	options:
 	
-	-d <delimiter>;	: put the <delimiter> string inbetween each returned character
+	-d <delimiter>	: put the <delimiter> string inbetween each returned character
 	
 	-r 				: reversed order
 	
-	-x <xor key>;	: xor (EXPERIMENTAL)
+	-x <xor key>	: xor (EXPERIMENTAL)
 	
 	-g <nb>			: group characters (default 1)
 	
 	--asm			: alias for: hexof -d "push $0x" -g 4 -r
 
 fun example:
-	echo -e $(hexof hello -d "\\x")
+	echo -e $(hexof hello -d "\\\x")
 
 # brutegen  
 Generate every possible strings based on a custom charset, and a custom length
