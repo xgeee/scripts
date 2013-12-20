@@ -45,4 +45,8 @@ easy url decode from the command line
 
 usage: urld url%20encoded%20string
 
+# urle
 
+easy url encode from the command line
+
+usage: urle "enc()de [me]"
