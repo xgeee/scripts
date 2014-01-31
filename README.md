@@ -50,3 +50,10 @@ usage: urld url%20encoded%20string
 easy url encode from the command line
 
 usage: urle "enc()de [me]"
+
+
+# imgur
+
+usage: imgur /path/to/img.png
+
+Currently only support single-file uploads.
