@@ -1,0 +1,1 @@
+echo -n "http://i.imgur.com/" && curl -s -F file=@"$1" http://imgur.com/upload | grep -Po "\[(.*)\]" | sed s/[\]\[\\\"\n\r]//g  | sed s/$/".png"/g
